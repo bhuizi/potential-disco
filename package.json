@@ -7,7 +7,11 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon index.js",
-    "mysql": "cd mysql && nodemon index.js"
+    "mysql": "cd mysql && nodemon index.js",
+    "format:check": "prettier --check .",
+    "format:write": "prettier --write .",
+    "lint:check": "eslint .",
+    "lint:fix": "eslint --fix ."
   },
   "author": "",
   "license": "ISC",
@@ -16,6 +20,12 @@
     "express": "4.18.2",
     "morgan": "^1.10.0",
     "mysql2": "3.7.1",
-    "nodemon": "3.0.3"
+    "nodemon": "3.0.3",
+    "prettierrc": "^0.0.0-5"
+  },
+  "devDependencies": {
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "prettier": "^3.2.4"
   }
 }
