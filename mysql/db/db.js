@@ -1,6 +1,7 @@
 import mysql from "mysql2/promise";
 import "../../env.js";
 
+// sample mysql db | https://github.com/datacharmer/test_db
 let connection;
 try {
   connection = await mysql.createConnection({
