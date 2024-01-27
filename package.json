@@ -5,8 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon index.js",
+    "test": "mocha \"./{,!(node_modules)/**/}test.js\"",
     "mysql": "cd mysql && nodemon index.js",
     "format:check": "prettier --check .",
     "format:write": "prettier --write .",
@@ -20,12 +19,14 @@
     "express": "4.18.2",
     "morgan": "1.10.0",
     "mysql2": "3.7.1",
-    "nodemon": "3.0.3",
-    "prettierrc": "0.0.0-5"
+    "nodemon": "3.0.3"
   },
   "devDependencies": {
     "eslint": "8.56.0",
     "eslint-config-prettier": "9.1.0",
-    "prettier": "3.2.4"
+    "mocha": "10.2.0",
+    "prettier": "3.2.4",
+    "should": "13.2.3",
+    "supertest": "6.3.4"
   }
 }
